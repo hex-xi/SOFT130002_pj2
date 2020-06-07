@@ -1,0 +1,13 @@
+footer{
+    height: 80px;
+    margin: -10px;
+    background-color: rgba(17, 40, 60, 0.82);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: smaller;
+}
+
+footer ul{
+    list-style-type:none;
+    padding-top: 20px;
+}

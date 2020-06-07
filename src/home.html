@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+
+</head>
+<body>
+<!--导航栏-->
+<div class="NavigationBar">
+    <!--logo-->
+    <div>
+        <a href="../src/home.html">
+            <img src="../img/logo.png" alt="logo">
+        </a>
+    </div>
+
+    <div class="NavigationBar_left">
+        <ul>
+            <li>
+                <a href="../src/home.html" class="highlight">首页</a>
+            </li>
+            <li>
+                <a href="../src/browser.html">浏览页</a>
+            </li>
+            <li>
+                <a href="../src/search.html">搜索⻚</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="NavigationBar_right dropdown" id="userCenterNav">
+        <span class="dropbtn" >个⼈中⼼<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        <div class="dropdown-content">
+            <a href="../src/upload.html"><i class="fa fa-upload" aria-hidden="true"></i> 上传</a>
+            <a href="../src/myPhoto.html"><i class="fa fa-picture-o" aria-hidden="true"></i> 我的照⽚</a>
+            <a href="../src/favor.html"><i class="fa fa-heart" aria-hidden="true"></i> 我的收藏</a>
+            <a href="../src/login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> 登⼊</a>
+        </div>
+    </div>
+
+</div>
+<!--头图-->
+<div class="scale">
+    <img src="../img/bigGraph.png" alt="头图">
+</div>
+
+<!--图⽚展示-->
+<div>
+    <!--第一行-->
+    <div class="container-1">
+        <div class="container-1-1">
+            <div>
+                <a href="../src/details.html" id="img1">
+                    <img src="../img/home1.jpg" alt="热门图片缩略图">
+                </a>
+            </div>
+            <div class="textOneRow textBox">
+                <h3 id="title1">title</h3>
+                <p id="describe1">SKIPT lets you bid for the best spot and skip to the front of the line in minutes by making the best offer. Selling a spot? SKIPT lets buyers around you bid for your spot in line. Wait in line for the best spot and watch the bids rise for your spot. </p>
+            </div>
+        </div>
+        <div class="container-1-2">
+            <div>
+                <a href="../src/details.html" id="img2">
+                    <img src="../img/higher.jpg" alt="热门图片缩略图">
+                </a>
+            </div>
+            <div class="textOneRow textBox">
+                <h3 id="title2">title</h3>
+                <p id="describe2">SKIPT lets you bid for the best spot and skip to the front of the line in minutes by making the best offer. Selling a spot? SKIPT lets buyers around you bid for your spot in line. Wait in line for the best spot and watch the bids rise for your spot. </p>
+            </div>
+
+        </div>
+        <div class="container-1-3">
+            <a href="../src/details.html" id="img3">
+                <img src="../img/home2.jpg" alt="热门图片缩略图">
+            </a>
+            <div class="textOneRow textBox">
+                <h3 id="title3">title</h3>
+                <p id="describe3">SKIPT lets you bid for the best spot and skip to the front of the line in minutes by making the best offer. Selling a spot? SKIPT lets buyers around you bid for your spot in line. Wait in line for the best spot and watch the bids rise for your spot. </p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--第二行-->
+    <div class="container-1">
+        <div class="container-2-1">
+            <a href="../src/details.html" id="img4">
+                <img src="../img/缩略图.jpg" alt="热门图片缩略图">
+            </a>
+            <div class="textOneRow textBox">
+                <h3 id="title4">title</h3>
+                <p id="describe4">SKIPT lets you bid for the best spot and skip to the front of the line in minutes by making the best offer. Selling a spot? SKIPT lets buyers around you bid for your spot in line. Wait in line for the best spot and watch the bids rise for your spot. </p>
+            </div>
+        </div>
+        <div class="container-2-1">
+            <a href="../src/details.html" id="img5">
+                <img src="../img/缩略图.jpg" alt="热门图片缩略图">
+            </a>
+            <div class="textOneRow textBox">
+                <h3 id="title5">title</h3>
+                <p id="describe5">SKIPT lets you bid for the best spot and skip to the front of the line in minutes by making the best offer. Selling a spot? SKIPT lets buyers around you bid for your spot in line. Wait in line for the best spot and watch the bids rise for your spot. </p>
+            </div>
+        </div>
+        <div class="container-2-1">
+            <a href="../src/details.html" id="img6">
+                <img src="../img/缩略图.jpg" alt="热门图片缩略图">
+            </a>
+            <div class="textOneRow textBox">
+                <h3 id="title6">title</h3>
+                <p id="describe6">SKIPT lets you bid for the best spot and skip to the front of the line in minutes by making the best offer. Selling a spot? SKIPT lets buyers around you bid for your spot in line. Wait in line for the best spot and watch the bids rise for your spot. </p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<br><br><br><br><br><br>
+
+<!--页脚-->
+<footer>
+    <ul>
+        <li>© The App All Rights Reserved 2020 </li>
+        <li>京公网安备17307130333号</li>
+    </ul>
+</footer>
+<!--悬浮按钮 ...-->
+<div>
+    <span id="btnTop" onclick="returnTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+    <span id="btnReflash" onclick="drawHotImages('refresh')"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+</div>
+
+</body>
+<script>
+    window.onscroll =function () {
+        scrollF()
+    };
+
+    function scrollF() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("btnTop").style.display = "block";
+            document.getElementById("btnReflash").style.display = "block";
+        }else {
+            document.getElementById("btnTop").style.display = "none";
+            document.getElementById("btnReflash").style.display = "none";
+        }
+
+    }
+    function returnTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/commonState.js"></script>
+<script src="../js/commonLogic.js"></script>
+<script src="../js/home.js"></script>
+
+</html>

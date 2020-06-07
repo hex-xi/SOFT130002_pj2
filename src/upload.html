@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>上传页面</title>
+        <link rel="stylesheet" type="text/css" href="../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../css/navigationBar.css">
+        <link rel="stylesheet" type="text/css" href="../css/footer.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="../css/upload.css">
+
+    </head>
+    <body>
+        <!--导航栏-->
+        <div class="NavigationBar">
+            <!--logo-->
+            <div>
+                <a href="./home.html">
+                    <img src="../img/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="NavigationBar_left">
+                <ul>
+                    <li>
+                        <a href="./home.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="./browser.html">浏览页</a>
+                    </li>
+                    <li>
+                        <a href="./search.html">搜索⻚</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="NavigationBar_right dropdown highlight" id="userCenterNav">
+                <span class="dropbtn">个⼈中⼼<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <div class="dropdown-content">
+                    <a href="./upload.html"><i class="fa fa-upload" aria-hidden="true"></i> 上传</a>
+                    <a href="./myPhoto.html"><i class="fa fa-picture-o" aria-hidden="true"></i> 我的照⽚</a>
+                    <a href="./favor.html"><i class="fa fa-heart" aria-hidden="true"></i> 我的收藏</a>
+                    <a href="./login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> 登⼊</a>
+                </div>
+            </div>
+
+        </div>
+        <!--主要区域-->
+        <div class="centerpart">
+            <form id="form" action="../php/upload.php" method="post" enctype="multipart/form-data" onsubmit="return mysubmit();">
+                <!--图片上传...-->
+                <div class="upload">
+                    <div id="showingImageDiv"class="imagePosition" >
+                        <br><br><br><br><br><br><br>
+                        图片未上传
+                    </div>
+                    <div class="buttonPosition" id="imgDiv">
+                        <button>上传图片 <i class="fa fa-upload" aria-hidden="true"></i></button>
+                        <input type="file" id="chooseImage" value="null" name="chooseImage" accept="image/png,image/jpeg" onchange="renderImg()">
+                    </div>
+                </div>
+
+                <div class="widcover">
+                    <div>
+                        <h4>图⽚标题</h4>
+                        <label>
+                            <input type="text" id="titleName" name="titleName">
+                        </label>
+                     </div>
+                    <div>
+                        <h4>图⽚描述</h4>
+                        <label>
+                            <textarea rows="30" id="imgDes" name="imgDes"></textarea>
+                        </label>
+                    </div>
+                    <div style="text-align: center">
+                        <h4>主题</h4>
+                        <label>
+                            <select id="selTheme" name="selTheme">
+                                <option value="notSelected">--选择主题--</option>
+                                <option value="scenery">Scenery</option>
+                                <option value="city">City</option>
+                                <option value="people">People</option>
+                                <option value="animal">Animal</option>
+                                <option value="building">Building</option>
+                                <option value="wonder">Wonder</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+                    </div>
+                    <!--多级选择栏-->
+                    <div style="text-align: center">
+                        <h4>拍摄国家</h4>
+                        <label>
+                            <select id="selCountry" name="selCountry">
+                                <option value="notSelected">--选择国家--</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div style="text-align: center">
+                        <h4>拍摄城市</h4>
+                        <label>
+                            <select id="selCity" name="selCity">
+                                <option value='notSelected'>--选择城市--</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="submit" id="submitBtm">
+                    <input type="submit" value="上传" >
+                </div>
+
+                <!--隐藏字段，需要提交的附加信息-->
+                <div hidden="hidden">
+                    <!--用户ID-->
+                    <input type="text" value="userIDxxx" name="userID" id="userID">
+                    <!--图片ID-->
+                    <input type="text" value="imageIDxxx" name="imgID" id="imgID">
+                    <!--是否有上传图片-->
+                    <input type="text" value="false" name="ifhasImgFile" id="ifhasImgFile">
+                    <input type="text" value="" name="noFilePath" id="noFilePath">
+                </div>
+
+            </form>
+        </div>
+
+        <!--页脚-->
+        <footer>
+            <ul>
+                <li>© The App All Rights Reserved 2020 </li>
+                <li>京公网安备17307130333号</li>
+            </ul>
+        </footer>
+
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/commonState.js"></script>
+        <script src="../js/commonLogic.js"></script>
+        <script src="../js/upload.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>登陆页面</title>
+        <link rel="stylesheet" type="text/css" href="../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+    </head>
+    <body>
+        <img src="../img/logo.png" alt="logo">
+        <div class="mainPart">
+            <form action="./home.html" method="get" onsubmit="return login();">
+                <div>
+                    <p>
+                        <label>
+                            <br>
+                            <input type="text" placeholder="账号" id="username">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <br>
+                            <input type="password" placeholder="密码" id="password">
+                        </label>
+                    </p>
+                    <p>
+                        <br>
+                        <label>
+                            <button type="submit">立即登录</button>
+                        </label>
+                    </p>
+
+
+                </div>
+
+            </form>
+        </div>
+        <div>
+            <a href="./register.html" class="line">创建新的账户</a>
+        </div>
+
+
+        <!--页脚...-->
+        <footer class="footer">
+                © The App All Rights Reserved 2020 京公网安备17307130333号
+        </footer>
+
+    </body>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/commonState.js"></script>
+    <script src="../js/login.js"></script>
+</html>

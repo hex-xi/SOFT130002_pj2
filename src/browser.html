@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>浏览页</title>
+        <link rel="stylesheet" type="text/css" href="../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../css/navigationBar.css">
+        <link rel="stylesheet" type="text/css" href="../css/footer.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="../css/browser.css">
+    </head>
+    <body>
+        <!--导航栏-->
+        <div class="NavigationBar">
+            <!--logo-->
+            <div>
+                <a href="./home.html">
+                    <img src="../img/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="NavigationBar_left">
+                <ul>
+                    <li>
+                        <a href="./home.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="./browser.html" class="highlight">浏览页</a>
+                    </li>
+                    <li>
+                        <a href="./search.html">搜索⻚</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="NavigationBar_right dropdown" id="userCenterNav">
+                <span class="dropbtn">个⼈中⼼<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <div class="dropdown-content">
+                    <a href="./upload.html"><i class="fa fa-upload" aria-hidden="true"></i> 上传</a>
+                    <a href="./myPhoto.html"><i class="fa fa-picture-o" aria-hidden="true"></i> 我的照⽚</a>
+                    <a href="./favor.html"><i class="fa fa-heart" aria-hidden="true"></i> 我的收藏</a>
+                    <a href="./login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> 登⼊</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!--侧边栏-->
+        <aside>
+            <!--标题浏览-->
+            <div class="left-1">
+                <form name="form1" action="" method="get">
+                    <label>
+                        <input name="text1" id="text1" type="text" placeholder="请输入标题进行搜索">
+                        <button type="button" onclick="titleFlit()"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                    </label>
+                </form>
+
+            </div>
+            <!--热⻔国家快速浏览-->
+            <div>
+                <div class="left-2-1">
+                    热⻔国家快速浏览
+                </div>
+                <div class="left-2-2">
+                    <ul id="hotCountries">
+                        <li><a onclick="alert('图⽚已刷新')">中国</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">日本</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">韩国</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">美国</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">英国</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">法国</a></li>
+                        <li><a onclick="alert('图⽚已刷新')" class="last">印度</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--热⻔城市快速浏览-->
+            <div>
+                <div class="left-2-1">
+                    热⻔城市快速浏览
+                </div>
+                <div class="left-2-2">
+                    <ul id="hotCities">
+                        <li><a onclick="alert('图⽚已刷新')">北京</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">东京</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">首尔</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">纽约</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">伦敦</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">巴黎</a></li>
+                        <li><a onclick="alert('图⽚已刷新')" class="last">孟买</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--热⻔内容快速浏览-->
+            <div>
+                <div class="left-2-1">
+                    热⻔主题快速浏览
+                </div>
+                <div class="left-2-2">
+                    <ul id="hotThemes">
+                        <li><a onclick="alert('图⽚已刷新')">风景</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">城市</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">人文</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">动物</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">建筑</a></li>
+                        <li><a onclick="alert('图⽚已刷新')">特色</a></li>
+                        <li><a onclick="alert('图⽚已刷新')" class="last">奇迹</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </aside>
+
+        <!--右边主区域-->
+        <div class="rightDiv">
+            <!--多级选择栏-->
+            <div class="right-1">
+                <label>
+                    <select id="selTheme">
+                        <option>--选择主题--</option>
+                        <option>恢宏富丽</option>
+                        <option>清雅恬静</option>
+                        <option>民风纯朴</option>
+                    </select>
+                    <select id="selCountry">
+                        <option>--选择国家--</option>
+                    </select>
+                    <select id="selCity">
+                        <option value='notSelected'>--选择城市--</option>
+                    </select>
+                    <button type="button" onclick="choicesFlit()"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                </label>
+            </div>
+
+            <!--浏览结果展示-->
+            <div id="showDiv">
+                <!--第一行-->
+                <div>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img1-1"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img1-2"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img1-3"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img1-4"></a>
+                </div>
+
+                <br>
+                <!--第二行-->
+                <div>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img2-1"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img3-1"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img4-1"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图" id="img5-1"></a>
+                </div>
+
+                <br>
+                <!--第三行-->
+                <div>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                </div>
+
+                <br>
+                <!--第四行-->
+                <div>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                    <a href="./details.html"><img src="../img/缩略图.jpg" alt="缩略图"></a>
+                </div>
+
+
+
+            </div>
+            <!--⻚码显示...-->
+            <div class="page">
+                <br><br>
+                <label id="pageBtns">
+                    <button onclick="alert('页面已跳转')"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                    <button onclick="alert('页面已跳转')" class="highlight">1</button>
+                    <button onclick="alert('页面已跳转')">2</button>
+                    <button onclick="alert('页面已跳转')">3</button>
+                    <button onclick="alert('页面已跳转')">4</button>
+                    <button onclick="alert('页面已跳转')">5</button>
+                    <button onclick="alert('页面已跳转')"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+
+                </label>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <!--页脚-->
+        <footer>
+            <ul>
+                <li>© The App All Rights Reserved 2020 </li>
+                <li>京公网安备17307130333号</li>
+            </ul>
+        </footer>
+
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/commonState.js"></script>
+        <script src="../js/commonLogic.js"></script>
+        <script src="../js/browser.js"></script>
+    </body>
+</html>
